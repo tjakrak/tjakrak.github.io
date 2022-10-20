@@ -16,7 +16,7 @@
  *  09. header styles
  *  10. home
  *  11. about
- *  12. services
+ *  12. thenumber
  *  13. portfolio
  *  14. testimonials
  *  15. clients
@@ -1881,12 +1881,12 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 
 
 /* ===================================================================
- *  12. services - (_layout.scss)
+ *  12. thenumber - (_layout.scss)
  *
  * ------------------------------------------------------------------- */
-#services {
+#thenumber {
   background-color: #19191b;
-  background-image: url(../images/services-bg.jpg);
+  background-image: url(../images/the-number-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -1897,7 +1897,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding: 15rem 0 15rem;
   color: rgba(255, 255, 255, 0.3);
 }
-#services .overlay {
+#thenumber .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -1905,7 +1905,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   height: 100%;
   background-color: rgba(5, 5, 5, 0.7);
 }
-#services .gradient-overlay {
+#thenumber .gradient-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -1917,39 +1917,39 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=0 );
 }
-#services .section-intro h3 {
+#thenumber .section-intro h3 {
   color: rgba(242, 242, 242, 0.5);
 }
-#services .section-intro h1 {
+#thenumber .section-intro h1 {
   color: #FFFFFF;
 }
-#services .section-intro .lead {
+#thenumber .section-intro .lead {
   color: rgba(242, 242, 242, 0.4);
 }
-#services .services-content {
+#thenumber .services-content {
   text-align: center;
   max-width: 1040px;
 }
-#services .services-list {
+#thenumber .services-list {
   margin-top: 1.2rem;
   text-align: center;
 }
-#services .services-list .service-item {
+#thenumber .services-list .services-item {
   margin-bottom: 3rem;
   padding: 0 50px;
 }
-#services .services-list .service-item p {
+#thenumber .services-list .services-item p {
   color: rgba(242, 242, 242, 0.5);
 }
-#services .services-list .icon {
+#thenumber .services-list .icon {
   display: inline-block;
   margin-bottom: 1.5rem;
 }
-#services .services-list .icon i {
+#thenumber .services-list .icon i {
   font-size: 5.4rem;
   color: #f9a828;
 }
-#services .services-list .h05 {
+#thenumber .services-list .h05 {
   font-size: 1.7rem;
   line-height: 1.765;
   color: #FFFFFF;
@@ -1958,42 +1958,42 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 
 /* ------------------------------------------------------------------- 
  * responsive:
- * services
+ * thenumber
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
-  #services .services-list .service-item {
+  #thenumber .services-list .services-item {
     padding: 0 40px;
   }
 }
 @media only screen and (max-width: 900px) {
-  #services .services-list .service-item {
+  #thenumber .services-list .services-item {
     padding: 0 30px;
   }
 }
 @media only screen and (max-width: 768px) {
-  #services {
+  #thenumber {
     padding: 12rem 0 12rem;
   }
-  #services .services-content {
+  #thenumber .services-content {
     max-width: 550px;
   }
-  #services .services-list .service-item {
+  #thenumber .services-list .services-item {
     padding: 0 15px;
   }
-  #services .services-list .icon i {
+  #thenumber .services-list .icon i {
     font-size: 5.1rem;
   }
 }
 @media only screen and (max-width: 600px) {
-  #services .services-list .service-item {
+  #thenumber .services-list .services-item {
     padding: 0 10px;
   }
-  #services .services-list .icon i {
+  #thenumber .services-list .icon i {
     font-size: 5rem;
   }
 }
 @media only screen and (max-width: 400px) {
-  #services .services-list .service-item {
+  #thenumber .services-list .services-item {
     padding: 0;
   }
 }
