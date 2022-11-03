@@ -1886,7 +1886,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * ------------------------------------------------------------------- */
 #thenumber {
   background-color: #19191b;
-  background-image: url(../images/the-number-bg.jpg);
+  background-image: url(../images/the-number-bg-2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -1956,19 +1956,8 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin-bottom: 3rem;
 }
 
-#thenumber .col-full .graph {
-  background-color: #FFFFFF;
-  display: block;
-	z-index: 5;
-	padding: 10px 10px 10px 10px;
-  width: 700px;
-  height: 700px;
-}
-
-#thenumber .col-full #test {
-	padding: 10px 10px 10px 10px;
-  display: block;
-	z-index: 6;
+#thenumber .col-full #graph {
+  font-family: georgia, serif;
 }
 
 /* ------------------------------------------------------------------- 

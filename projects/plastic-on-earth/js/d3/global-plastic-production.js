@@ -4,8 +4,9 @@
 
 function main() {
 
-    d3.csv("../../data/global-plastics-production.csv").then(
+    d3.csv("data/global-plastics-production.csv").then(
         (data) => {
+            console.log(data);
             data.forEach(function(d) {
                 d.Amount = +d["Global plastics production"];
             });
@@ -24,11 +25,12 @@ function lineChart(data) {
     const canvasWidth = 700;
     const canvasHeight = 600;
     // Define all the margins within canvas
-    const marginLeft = canvasWidth * 0.15;
+    const marginLeft = canvasWidth * 0.2;
     const marginRight = canvasWidth * 0.1;
     const marginTop = canvasHeight * 0.15;
     const marginBot = canvasHeight * 0.2;
 
+    //let svg = d3.select("#graph #test").append("svg")
     let svg = d3.select("svg")
     svg.attr("width", canvasWidth)
         .attr("height", canvasHeight);
@@ -68,20 +70,13 @@ function lineChart(data) {
         .attr('stroke', "red")
         .attr("d", line);
 
-    // Add main title
-    svg.append("text")
-        .text("Global Plastic Production")
-        .attr("x", (marginLeft + (canvasWidth - marginRight - marginLeft) / 2))
-        .attr("y", canvasHeight * 0.05)
-        .attr("font-size", "25")
-        .style("text-anchor", "middle")
-
     // Add X axis title
     svg.append("text")
         .text("Years")
         .attr("x", (marginLeft + (canvasWidth - marginRight - marginLeft) / 2))
         .attr("y", canvasHeight * 0.95)
         .attr("font-size", "20")
+        .attr("fill", "white")
         .style("text-anchor", "middle")
 
     // Add Y axis title
@@ -91,6 +86,7 @@ function lineChart(data) {
         .attr("transform",
             `translate(${canvasWidth * 0.03}, ${marginTop + (canvasHeight - marginBot - marginTop) / 2}) 
             rotate(-90)`)
+        .attr("fill", "white")
         .style("text-anchor", "middle")
 
 
