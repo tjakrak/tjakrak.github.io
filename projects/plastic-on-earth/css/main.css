@@ -1160,7 +1160,7 @@ input::-moz-focus-inner {
 .section-intro.with-bottom-sep::after {
   display: inline-block;
   height: 1px;
-  width: 200px;
+  width: 0.5px;
   background-color: rgba(242, 242, 242, 0.1);
   text-align: center;
 }
