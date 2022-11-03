@@ -26,6 +26,7 @@
    ================================================== -->
 	<script src="js/modernizr.js"></script>
 	<script src="js/pace.min.js"></script>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
 
    <!-- favicons
 	================================================== -->
@@ -179,13 +180,16 @@
    	<div class="row narrow section-intro with-bottom-sep animate-this">
    		<div class="col-full">
    			
-   				<h3>The Number</h3>
-   				<h1>Global Plastic Production</h1>
-   			
-   				<p class="lead">
-					Rate of plastic production per year.
-				</p>
-   			
+			<h3>The Number</h3>
+			<h1>Global Plastic Production</h1>
+		
+			<p class="lead">
+				Rate of plastic production per year.
+			</p>
+
+			<div class="graph">
+				<script id="test" src="js/d3/global-plastic-production.js"></script>
+			</div>
    		</div> <!-- end col-full -->
    	</div> <!-- end row -->		
 

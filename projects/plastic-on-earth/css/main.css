@@ -1956,6 +1956,21 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin-bottom: 3rem;
 }
 
+#thenumber .col-full .graph {
+  background-color: #FFFFFF;
+  display: block;
+	z-index: 5;
+	padding: 10px 10px 10px 10px;
+  width: 700px;
+  height: 700px;
+}
+
+#thenumber .col-full #test {
+	padding: 10px 10px 10px 10px;
+  display: block;
+	z-index: 6;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * thenumber
