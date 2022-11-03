@@ -100,6 +100,7 @@ function lineChart(data) {
 
     if (isMobile) {
         xAxis.selectAll("text") // select all the text element
+        .attr("transform", "translate(-10,10)rotate(-45)") // rotate the text
         .attr("font-size", fontSize - 12);
 
         yAxis.selectAll("text") // select all the text element
