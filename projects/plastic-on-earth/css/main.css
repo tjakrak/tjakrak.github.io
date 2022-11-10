@@ -1957,6 +1957,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 
 #thenumber .col-full #graph {
+  /* font-family: "montserrat-bold", sans-serif; */
   font-family: georgia, serif;
 }
 

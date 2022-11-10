@@ -84,7 +84,6 @@ function lineChart(data) {
         .text("Years")
         .attr("x", (marginLeft + (width - marginRight - marginLeft) / 2))
         .attr("y", height * 0.95)
-        // .attr("font-size", fontSize)
         .attr("fill", "white")
         .style("text-anchor", "middle")
 
@@ -94,7 +93,6 @@ function lineChart(data) {
         .attr("transform",
             `translate(${width * 0.03}, ${marginTop + (height - marginBot - marginTop) / 2}) 
             rotate(-90)`)
-        // .attr("font-size", fontSize)
         .attr("fill", "white")
         .style("text-anchor", "middle")
 
