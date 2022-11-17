@@ -4,7 +4,7 @@
 
 function main() {
 
-    d3.csv("../data/plastic-production-by-sector.csv").then(
+    d3.csv("data/plastic-production-by-sector.csv").then(
         // on resolved - can use "(data) =>" or "function(data)"
         (data) => {
             data.forEach(function(d) {
