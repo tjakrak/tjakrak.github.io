@@ -1956,7 +1956,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin-bottom: 3rem;
 }
 
-#thenumber .col-full #graph {
+#thenumber .col-full #graph1 {
   /* font-family: "montserrat-bold", sans-serif; */
   font-family: georgia, serif;
 }
@@ -2003,9 +2003,245 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   }
 }
 
+/* ===================================================================
+ *  13. graph_white - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+ #graph-white {
+  position: relative;
+  padding: 4.2rem 0 12rem;
+  background-color: #FFFFFF;
+  min-height: 696px;
+  text-align: center;
+}
+#graph-white .about-wrap {
+  max-width: 850px;
+}
+#graph-white span {
+  color: #07617d;
+}
+#graph-white h3 {
+  font-family: "montserrat-bold", sans-serif;
+  line-height: 1.667;
+  color: #07617d;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  position: relative;
+}
+
+#graph-white h1 {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.667;
+  color: #07617d;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  position: relative;
+}
+
+#graph-white h3::before {
+  display: block;
+  content: "";
+  width: 3px;
+  height: 9.6rem;
+  background-color: rgba(149, 149, 149, 0.7);
+  margin: 0 auto 2.4rem;
+}
+#graph-white .lead {
+  font-family: "librebaskerville-bold", serif;
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #3c3f41;
+  margin-top: 6rem;
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * about 
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+  #graph-white {
+    min-height: 636px;
+  }
+  #graph-white .about-wrap {
+    max-width: 800px;
+  }
+  #graph-white .lead {
+    font-size: 3.8rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #graph-white .about-wrap {
+    max-width: 720px;
+  }
+  #graph-white .lead {
+    font-size: 3.6rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #graph-white h3 {
+    font-size: 1.7rem;
+  }
+  #graph-white .about-wrap {
+    max-width: 600px;
+  }
+  #graph-white .lead {
+    font-size: 3.1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #graph-white {
+    min-height: auto;
+  }
+  #graph-white .about-wrap {
+    max-width: 500px;
+  }
+  #graph-white .lead {
+    margin-top: 4.8rem;
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #graph-white h3 {
+    font-size: 1.5rem;
+  }
+  #graph-white .lead {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #graph-white {
+    padding: 4.2rem 0 9.6rem;
+  }
+  #graph-white .about-wrap {
+    max-width: 380px;
+  }
+  #graph-white .lead {
+    font-size: 2.3rem;
+  }
+}
 
 /* ===================================================================
- *  13. portfolio - (_layout.scss)
+ *  13. graph_black - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+ #graph-black {
+  position: relative;
+  padding: 4.2rem 0 12rem;
+  background-color: #000000;
+  min-height: 696px;
+  text-align: center;
+}
+#graph-black .about-wrap {
+  max-width: 850px;
+}
+#graph-black span {
+  color: #07617d;
+}
+#graph-black h3 {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.667;
+  color: #07617d;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  position: relative;
+}
+
+#graph-black h1 {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.667;
+  color: #07617d;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  position: relative;
+}
+
+#graph-black h3::before {
+  display: block;
+  content: "";
+  width: 3px;
+  height: 9.6rem;
+  background-color: rgba(149, 149, 149, 0.7);
+  margin: 0 auto 2.4rem;
+}
+#graph-black .lead {
+  font-family: "librebaskerville-bold", serif;
+  font-size: 4rem;
+  line-height: 1.8;
+  color: rgba(242, 242, 242, 0.4);
+  margin-top: 6rem;
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * about 
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+  #graph-black {
+    min-height: 636px;
+  }
+  #graph-black .about-wrap {
+    max-width: 800px;
+  }
+  #graph-black .lead {
+    font-size: 3.8rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #graph-black .about-wrap {
+    max-width: 720px;
+  }
+  #graph-black .lead {
+    font-size: 3.6rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #graph-black h3 {
+    font-size: 1.7rem;
+  }
+  #graph-black .about-wrap {
+    max-width: 600px;
+  }
+  #graph-black .lead {
+    font-size: 3.1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #graph-black {
+    min-height: auto;
+  }
+  #graph-black .about-wrap {
+    max-width: 500px;
+  }
+  #graph-black .lead {
+    margin-top: 4.8rem;
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #graph-black h3 {
+    font-size: 1.5rem;
+  }
+  #graph-black .lead {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #graph-black {
+    padding: 4.2rem 0 9.6rem;
+  }
+  #graph-black .about-wrap {
+    max-width: 380px;
+  }
+  #graph-black .lead {
+    font-size: 2.3rem;
+  }
+}
+
+/* ===================================================================
+ *  14. portfolio - (_layout.scss)
  *
  * ------------------------------------------------------------------- */
 #portfolio {
@@ -2265,7 +2501,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 
 
 /* ===================================================================
- *  14. testimonials - (_layout.scss)
+ *  15. testimonials - (_layout.scss)
  *
  * ------------------------------------------------------------------- */
 #testimonials {
@@ -2433,7 +2669,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 
 
 /* ===================================================================
- *  15. clients - (_layout.scss)
+ *  16. clients - (_layout.scss)
  *
  * ------------------------------------------------------------------- */
 #clients {
@@ -2997,4 +3233,53 @@ footer h4.h05::after {
   .footer-bottom .copyright span::after {
     display: none;
   }
+}
+
+/* ------------------------------------------------------------------- 
+ * D3 Tooltip
+ * ------------------------------------------------------------------- */
+#tooltip2 {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  padding: 2px;
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 12px;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+#tooltip3 {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+#tooltip4 {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }

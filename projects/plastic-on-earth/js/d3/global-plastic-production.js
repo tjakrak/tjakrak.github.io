@@ -1,5 +1,5 @@
 // Code Source: https://learning.oreilly.com/library/view/interactive-data-visualization/9781491921296/ch11.html#idm140093188423200
-// Code Source: https://d3-graph-gallery.com/graph/line_basic.html
+// Code Source: https://d3-graph0-gallery.com/graph0/line_basic.html
 // Data Source: https://ourworldindata.org/plastic-pollution
 
 function main() {
@@ -28,8 +28,8 @@ function lineChart(data) {
     }
 
     // Setting up canvas width and height
-    let width = $('#graph').width();
-    let height = isMobile? $('#graph').height() * 1.7 : $('#graph').height() * 3;
+    let width = $('#graph1').width();
+    let height = isMobile? $('#graph1').height() * 1.7 : $('#graph1').height() * 3;
 
     // Define all the margins within canvas
     const marginLeft = width * 0.2;
@@ -41,7 +41,6 @@ function lineChart(data) {
     let style = window.getComputedStyle(element[0], null).getPropertyValue('font-size');
     let fontSize = parseFloat(style);
 
-    //let svg = d3.select("#graph #test").append("svg")
     let svg = d3.select("svg")
     svg.attr("width", width)
         .attr("height", height)
@@ -70,7 +69,7 @@ function lineChart(data) {
         .y(function(d) { return marginTop + yScale(Math.abs(d.Amount)); });
 
     //Create line
-    svg.append("path")
+    let path = svg.append("path")
         //Instead of using data() to bind each value in our dataset array to a different element,
         // we use datum(), the method for binding a single data value to a single element.
         .datum(data)
@@ -110,6 +109,20 @@ function lineChart(data) {
         yTitle.selectAll("text")
         .attr("font-size", fontSize - 12);
     }
+
+    const pathLength = path.node().getTotalLength();
+    // D3 provides lots of transition options, have a play around here:
+    // https://github.com/d3/d3-transition
+    const transitionPath = d3
+        .transition()
+        .ease(d3.easeSin)
+        .duration(2500);
+
+    path
+        .attr("stroke-dashoffset", pathLength)
+        .attr("stroke-dasharray", pathLength)
+        .transition(transitionPath)
+        .attr("stroke-dashoffset", 0);
 
 }
 
