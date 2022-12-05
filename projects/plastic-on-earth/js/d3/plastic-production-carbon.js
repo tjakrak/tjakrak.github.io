@@ -27,11 +27,12 @@ function treeMap(data) {
     let div = d3.select("#tooltip4")
         .style("opacity", 0);
 
-    let canvasWidth = 600;
+    let canvasWidth = 800;
     let canvasHeight = 600;
 
     svg.attr("width", canvasWidth)
-        .attr("height", canvasHeight);
+        .attr("height", canvasHeight)
+        .attr("transform", "translate(75, 0)");
 
     // stratify the data: reformatting for d3.js
     const root = d3.stratify()
@@ -44,7 +45,7 @@ function treeMap(data) {
     // Then d3.treemap computes the position of each element of the hierarchy
     // The coordinates are added to the root object above
     d3.treemap()
-        .size([canvasWidth, canvasHeight])
+        .size([canvasWidth - 150, canvasHeight])
         .padding(4)
         (root)
 
@@ -97,6 +98,32 @@ function treeMap(data) {
         .text(function(d){ return d.data.Type})
         .attr("font-size", "15px")
         .attr("fill", "white")
+
+
+    // Add annotation
+    const annotations = [
+        {
+          note: {
+            label: "Most of the plastics are produced almost entirely using the byproducts of fossil fuel. This particular type of plastic produce 4900 kg CO2e/ ton polymer",
+            title: "PUR"
+          },
+          connector: {
+            end: "arrow" // 'dot' also available
+          },
+          x: 525,
+          y: 150,
+          dy: 75,
+          dx: 190
+        }
+    ].map(function(d){ d.color = "green"; return d})
+
+    const makeAnnotations = d3.annotation()
+        .type(d3.annotationLabel)
+        .annotations(annotations)
+
+    svg.append("g")
+        .attr("class", "annotation-group")
+        .call(makeAnnotations)
 
 }
 

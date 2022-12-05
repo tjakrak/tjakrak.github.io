@@ -25,6 +25,9 @@ function geoMap(topology, data) {
     // Setting up canvas width and height
     const width = 700;
     const height = 600;
+    const marginTop = 110;
+    const marginBot = 100;
+    const marginRight = 100;
 
     let svg = d3.select("#svg3")
     let div = d3.select("#tooltip3")
@@ -36,9 +39,9 @@ function geoMap(topology, data) {
     // Map and projection
     const path = d3.geoPath();
     const projection = d3.geoMercator()
-        .scale(70)
+        .scale(80)
         .center([0,20])
-        .translate([width / 2, height / 2]);
+        .translate([width / 2, height / 2 - marginBot]);
 
     let dataArr = Array.from( data.values() );
     let minData = d3.min(dataArr);
@@ -57,7 +60,7 @@ function geoMap(topology, data) {
             .style("opacity", .9);
 
         d.total = data.get(d.properties.name) || 0;
-        div.html(`<b><p>Country: ${ d.properties.name } </br> Poverty Index: ${ d.total }</p></b>`) // set the inner HTML on all the selected elements.
+        div.html(`<b><p>Country: ${ d.properties.name } </br> MPW: ${ d.total }</p></b>`) // set the inner HTML on all the selected elements.
             .style("left", d3.pointer(event)[0] + "px")
             .style("top", d3.pointer(event)[1] + "px");
     };
@@ -95,6 +98,24 @@ function geoMap(topology, data) {
         .on("mouseover", showToolTip)
         .on("mousemove", moveTooltip)
         .on("mouseleave", hideToolTip)
+
+    // Add legend
+    svg.append("g")
+    .attr("class", "legendQuant")
+    .attr("transform", `translate(100, ${height-marginBot})`)
+    .attr("fill", "white")
+    .attr("stroke", "white");
+
+    let legend = d3.legendColor()
+        .cells(10)
+        .title("Mismanaged Plastic Waste")
+        .titleWidth(100)
+        .orient("horizontal")
+        .shapeWidth(50)
+        .scale(colorScale);
+
+    svg.select(".legendQuant")
+        .call(legend);
 
 }
 

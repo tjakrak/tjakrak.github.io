@@ -27,6 +27,8 @@
 	<script src="js/pace.min.js"></script>
 	<script src="https://d3js.org/d3.v7.min.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+	<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
 
    <!-- favicons
 	================================================== -->
@@ -107,7 +109,7 @@
 						Plastic on Earth  <br>
 						</h1>	
 
-						<a href="../data-viz/files/project_proposal_and_alpha_release.pdf"><h5 class="animate-intro">Alpha Release</h5></a>
+						<a href="../data-viz/files/project_proposal_and_alpha_release.pdf"><h5 class="animate-intro">Ryan Tjakrakartadinata</h5></a>
 						<div class="more animate-intro">
 							<a class="smoothscroll button stroke" href="#about">
 								Learn More
@@ -274,251 +276,28 @@
 	</div> <!-- end about-wrap  -->
 
    </section> <!-- end about -->
-
-
-   <!-- portfolio
+   
+   <!-- about
    ================================================== -->
-   <section id="portfolio">
-   	
-   	<div class="intro-wrap">
+   <section id="graph-black">
 
-   		<div class="row narrow section-intro with-bottom-sep animate-this">
-	   		<div class="col-twelve">
-	   			<h3>Showcase</h3>
-		   		<h1>See Our Featured Projects.</h1>  			
-		   		
-		   		<p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>	   			
-	   		</div>   		
-	   	</div> <!-- end row section-intro -->   		
+	<div class="row about-wrap">
+		<div class="col-full">
 
-   	</div> <!-- end intro-wrap -->   	
+			<h1>How bad is it?</h1>
+			<p>
+				<b>
+					- Only a small amount of plastics are recycled and the rest of them end up in landfill/incinerated <br>
+					- Plastic pollution reach Antartica, the most remote locations on Earth <br>
+					- Marine animals get entangled in plastic waste <br>
+					- Seabirds, turtles, whales, seaguls and many other animals ingested plastic waste <br>
+					- Bring disease to marine animals and corals <br>
+				</b>
+			</p>
+		</div> <!-- end col-full  -->
+	</div> <!-- end about-wrap  -->
 
-   	<div class="row portfolio-content">
-   		<div class="col-twelve">
-   			<div id="folio-wrap" class="bricks-wrapper">					
-
-   				<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-shutterbug.jpg" data-sub-html="#01" > 	
-	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/shutterbug.jpg" alt="Skaterboy">	                     
-	                     <div class="item-text">
-	                     	<span class="folio-types">
-		     					      Web Development
-		     					   </span>
-		     					   <h3 class="folio-title">Shutterbug</h3>	     					   
-		     					</div>                                        
-	                  </a>
-	                  <a href="https://www.behance.net/" class='details-link' title="details">
-	                  	<i class="icon-link"></i>
-	                  </a>
-	               </div> <!-- end item-wrap -->
-						
-						<div id="01" class='hide'>
-							<h4>Shutterbug</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
-						</div>
-	        		</div> <!-- end folio-item -->
-
-	        		<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-yellowwall.jpg" data-sub-html="#02"> 	
-	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/yellowwall.jpg" alt="Shutterbug">	                     
-	                     <div class="item-text">
-	                     	<span class="folio-types">
-		     					      Marketing
-		     					   </span>
-		     					   <h3 class="folio-title">Yellow Wall</h3>  	     					   
-		     					</div>                                        
-	                  </a>
-	                  <a href="https://www.behance.net/" class='details-link' title="details">
-	                  	<i class="icon-link"></i>
-	                  </a>
-	               </div> <!-- end item-wrap -->
-
-	               <div id="02" class='hide'>
-							<h4>Yellow Wall</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
-						</div>	               
-	        		</div> <!-- end folio-item -->
-
-	        		<div class="brick folio-item">
-						<div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-architecture.jpg" data-sub-html="#03" >   	
-							<a href="#" class="overlay">
-								<img src="images/portfolio/architecture.jpg" alt="Explore">	                     
-								<div class="item-text">	                     		     					    
-									<span class="folio-types">
-										Web Design
-									</span>
-									<h3 class="folio-title">Architecture</h3>
-								</div>                                        
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-link"></i>
-							</a>
-						</div> <!-- end item-wrap -->	
-
-	               		<div id="03" class='hide'>
-							<h4>Architecture</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
-						</div>               
-	        		</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-						<div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-minimalismo.jpg"  data-sub-html="#04" >
-							<a href="#" class="overlay">
-								<img src="images/portfolio/minimalismo.jpg" alt="Minimalismo">	                     
-								<div class="item-text">	     					    
-									<span class="folio-types">
-										Web Design
-									</span>
-									<h3 class="folio-title">Minimalismo</h3>
-								</div>                                        
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-link"></i>
-							</a>
-						</div> <!-- end item-wrap -->
-
-						<div id="04" class='hide'>
-							<h4>Minimalismo</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
-						</div>  	               
-	        		</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-	               	<div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-skaterboy.jpg"  data-sub-html="#05" >  	
-	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/skaterboy.jpg" alt="Bicycle">	                     
-	                     <div class="item-text">	     					    
-		     					   <span class="folio-types">
-		     					      Branding
-		     					   </span>
-		     					   <h3 class="folio-title">Skaterboy</h3>
-		     					</div>                                        
-	                  </a>
-	                  <a href="https://www.behance.net/" class='details-link' title="details">
-	                  	<i class="icon-link"></i>
-	                  </a>
-	               </div> <!-- end item-wrap -->
-
-	               <div id="05" class='hide'>
-							<h4>Skaterboy</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
-						</div>	               
-	        		</div> <!-- end folio-item -->
-	           
-					<div class="brick folio-item">
-	               <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-salad.jpg"  data-sub-html="#06">     	
-	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/salad.jpg" alt="Salad">	                     
-	                     <div class="item-text">	     					    
-		     					   <span class="folio-types">
-		     					      Branding
-		     					   </span>
-		     					   <h3 class="folio-title">Salad</h3>
-		     					</div>                                        
-	                  </a>
-	                  <a href="https://www.behance.net/" class='details-link' title="details">
-	                  	<i class="icon-link"></i>
-	                  </a>
-	               </div> <!-- end item-wrap -->
-
-	               <div id="06" class='hide'>
-							<h4>Salad</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
-						</div>	               
-	        		</div> <!-- end folio-item -->   				
-
-   			</div> <!-- end folio-wrap -->
-   		</div> <!-- end twelve -->
-   	</div> <!-- end portfolio-content -->   	
-
-   </section>  <!-- end portfolio -->
-
-
-   <!-- Testimonials Section
-   ================================================== -->
-   <section id="testimonials">
-
-   	<div class="row">
-   		<div class="col-twelve">
-   			<h2 class="animate-this">What They Say About Us.</h2>
-   		</div>   		
-   	</div>   	
-
-      <div class="row flex-container">
-    
-         <div id="testimonial-slider" class="flex-slider animate-this">
-
-            <ul class="slides">
-
-               <li>
-                  <p>
-                  Your work is going to fill a large part of your life, and the only way to be truly satisfied is
-                  to do what you believe is great work. And the only way to do great work is to love what you do.
-                  If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
-                  </p> 
-
-                  <div class="testimonial-author">
-                    	<img src="images/avatars/user-02.jpg" alt="Author image">
-                    	<div class="author-info">
-                    		Steve Jobs
-                    		<span class="position">CEO, Apple.</span>
-                    	</div>
-                  </div>                 
-             	</li> <!-- end slide -->
-
-               <li>
-                  <p>
-                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.    
-                  </p>
-
-               	<div class="testimonial-author">
-                    	<img src="images/avatars/user-03.jpg" alt="Author image">
-                    	<div class="author-info">
-                    		John Doe
-                    		<span>CEO, ABC Corp.</span>
-                    	</div>
-                  </div>                                         
-               </li> <!-- end slide -->
-
-            </ul> <!-- end slides -->
-
-         </div> <!-- end testimonial-slider -->         
-        
-      </div> <!-- end flex-container -->
-
-   </section> <!-- end testimonials -->
-
-
-	<!-- stats
-   ================================================== -->
-   <section id="clients">
-
-		<div class="row animate-this">
-			<div class="col-twelve">
-
-				<div class="client-lists owl-carousel">
-  					<div><img src="images/clients/mozilla.png" alt=""></div>
-  					<div><img src="images/clients/bower.png" alt=""></div>
-  					<div><img src="images/clients/codepen.png" alt=""></div>
-  					<div><img src="images/clients/envato.png" alt=""></div>
-  					<div><img src="images/clients/firefox.png" alt=""></div>
-  					<div><img src="images/clients/grunt.png" alt=""></div>
-  					<div><img src="images/clients/evernote.png" alt=""></div>
-  					<div><img src="images/clients/github.png" alt=""></div>
-  					<div><img src="images/clients/joomla.png" alt=""></div>
-  					<div><img src="images/clients/jQuery.png" alt=""></div>
-  					<div><img src="images/clients/wordpress.png" alt=""></div>
-				</div>
-				
-			</div> <!-- end col-twelve -->
-		</div> <!-- end row -->
-
-   </section> <!-- end clients -->
-
+   </section> <!-- end about -->
 
 	<!-- contact
    ================================================== -->
@@ -528,104 +307,26 @@
 
 		<div class="row narrow section-intro with-bottom-sep animate-this">
    		<div class="col-twelve">
-   			<h3>Contact</h3>
-   			<h1>Get In Touch.</h1>
-
-   			<p class="lead">Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+   			<h3>References</h3>
+			<h5 style="color: rgb(225, 214, 214);">Data</h5>
+   			<p class="lead">
+				https://static-content.springer.com<br>
+				https://stats.oecd.org/Index.aspx?DataSetCode=PLASTIC_GHG_2#<br>
+				https://chinadialogueocean.net/en/pollution/14200-how-does-plastic-pollution-affect-the-ocean/?gclid=Cj0KCQiAyracBhDoARIsACGFcS7bGwQlfP7fUv2m3qrW3u_7fAlB2tQUxDD82Zg_iEbHUgP15uoaRhoaAl2uEALw_wcB
+			</p>
+			<h5 style="color: rgb(225, 214, 214);">Library</h5>
+			<p class="lead">
+				https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js<br>
+				https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js
+			</p>
+			<h5 style="color: rgb(225, 214, 214);">Example</h5>
+			<p class="lead">
+				https://bl.ocks.org/susielu/a464c24d8b42f0c4d9fafe7b48e9e60a
+			</p>
    		</div> 
    	</div> <!-- end section-intro -->
-
-   	<div class="row contact-content">
-
-   		<div class="col-seven tab-full animate-this">
-
-   			<h5>Send Us A Message</h5>
-
-            <!-- form -->
-            <form name="contactForm" id="contactForm" method="post">     			
-
-               <div class="form-field">
- 					   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
-               </div>
-
-               <div class="row">
-                 	<div class="col-six tab-full">
-                 		<div class="form-field">
-                 			<input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-                 		</div>		      			   
-		            </div>
-	            	<div class="col-six tab-full">	            
-	            		<div class="form-field">
-	            			<input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-	                  </div>		     				   
-		            </div>
-               </div>
-                                         
-               <div class="form-field">
-	              	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
-	            </div> 
-
-               <div class="form-field">
-                  <button class="submitform">Submit</button>
-
-                  <div id="submit-loader">
-                     <div class="text-loader">Sending...</div>                             
-       			      <div class="s-loader">
-							  	<div class="bounce1"></div>
-							  	<div class="bounce2"></div>
-							  	<div class="bounce3"></div>
-							</div>
-						</div>
-               </div>
-
-      		</form> <!-- end form -->
-
-            <!-- contact-warning -->
-            <div id="message-warning"></div> 
-
-            <!-- contact-success -->
-      		<div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-      		</div>
-
-         </div> <!-- end col-seven --> 
-
-         <div class="col-four tab-full contact-info end animate-this">
-
-         	<h5>Contact Information</h5>
-
-         	<div class="cinfo">
-	   			<h6>Where to Find Us</h6>
-	   			<p>
-	            	1600 Amphitheatre Parkway<br>
-	            	Mountain View, CA<br>
-	            	94043 US
-	            </p>
-	   		</div> <!-- end cinfo -->
-
-	   		<div class="cinfo">
-	   			<h6>Email Us At</h6>
-	   			<p>
-	   				someone@infinitysite.com<br>
-				   	info@infinitysite.com			     
-				   </p>
-	   		</div> <!-- end cinfo -->
-
-	   		<div class="cinfo">
-	   			<h6>Call Us At</h6>
-	   			<p>
-	   				Phone: (+63) 555 1212<br>
-				   	Mobile: (+63) 555 0100<br>
-				     	Fax: (+63) 555 0101
-				   </p>
-	   		</div>
-
-         </div> <!-- end cinfo --> 
-
-   	</div> <!-- end row contact-content -->
-		
+			
 	</section> <!-- end contact -->
-
 
 	<!-- footer
    ================================================== -->
@@ -636,9 +337,9 @@
 
 	      	<div class="col-five tab-full footer-about">       
 
-	            <h4 class="h05">Infinity.</h4>
+	            <h4 class="h05">Plastic On Earth</h4>
 
-	            <p>Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Proin eget tortor risus.</p>	            
+	            <p>...</p>	            
 
 		      </div> <!-- end footer-about -->
 
@@ -660,7 +361,7 @@
 
 	      		<h4 class="h05">Get Notified.</h4>
 
-	      		<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa.</p>
+	      		<p>...</p>
 
 	      		<div class="subscribe-form">
 	      	

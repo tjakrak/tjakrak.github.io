@@ -2147,7 +2147,6 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   letter-spacing: .3rem;
   position: relative;
 }
-
 #graph-black h1 {
   font-family: "montserrat-bold", sans-serif;
   font-size: 3.2rem;
@@ -2157,7 +2156,6 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   letter-spacing: .3rem;
   position: relative;
 }
-
 #graph-black h3::before {
   display: block;
   content: "";
@@ -2172,6 +2170,9 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   line-height: 1.8;
   color: rgba(242, 242, 242, 0.4);
   margin-top: 6rem;
+}
+#graph-black p {
+  color: #ffffff;
 }
 
 /* ------------------------------------------------------------------- 
