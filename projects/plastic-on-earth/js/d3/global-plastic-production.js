@@ -116,7 +116,7 @@ function lineChart(data) {
     const transitionPath = d3
         .transition()
         .ease(d3.easeSin)
-        .duration(2500);
+        .duration(8000);
 
     path
         .attr("stroke-dashoffset", pathLength)
