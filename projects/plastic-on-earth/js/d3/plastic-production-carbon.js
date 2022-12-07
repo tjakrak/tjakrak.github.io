@@ -104,7 +104,7 @@ function treeMap(data) {
     const annotations = [
         {
           note: {
-            label: "Most of the plastics are produced almost entirely using the byproducts of fossil fuel. This particular type of plastic produce 4900 kg CO2e/ ton polymer",
+            label: "Polyurethane is the base component for various commercial applications and building materials. It can also be found in apparel, sporting goods, and traffic management devices.",
             title: "PUR"
           },
           connector: {
