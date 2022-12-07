@@ -41,7 +41,7 @@ function lineChart(data) {
     let style = window.getComputedStyle(element[0], null).getPropertyValue('font-size');
     let fontSize = parseFloat(style);
 
-    let svg = d3.select("svg")
+    let svg = d3.select("#svg1")
     svg.attr("width", width)
         .attr("height", height)
 
@@ -62,21 +62,48 @@ function lineChart(data) {
         .attr("transform", `translate(${marginLeft}, ${marginTop})`)
         .call(d3.axisLeft(yScale)) // syntax: d3.axisLeft(scale) - construct an y-axis for the given scale
 
-    // Define line generator
-    // The x and y accessors tell the line generator how to decide where to place each point on the line.
-    let line = d3.line()
-        .x(function(d) { return marginLeft + xScale(new Date(d.Year, 0, 1)); })
-        .y(function(d) { return marginTop + yScale(Math.abs(d.Amount)); });
+    function lineWrapper() {
+        // Define line generator
+        // The x and y accessors tell the line generator how to decide where to place each point on the line.
+        let line = d3.line()
+            .x(function(d) { return marginLeft + xScale(new Date(d.Year, 0, 1)); })
+            .y(function(d) { return marginTop + yScale(Math.abs(d.Amount)); });
 
-    //Create line
-    let path = svg.append("path")
-        //Instead of using data() to bind each value in our dataset array to a different element,
-        // we use datum(), the method for binding a single data value to a single element.
-        .datum(data)
+        return line;
+    }
+
+    svg.append("path")
         .attr("class", "line")
         .attr('fill', 'none')
-        .attr('stroke', "red")
-        .attr("d", line);
+        .attr('stroke', "red");
+
+
+    function pathWrapper(data, line) {
+        //Create line
+        let path = svg.select(".line")
+            .interrupt()
+            //Instead of using data() to bind each value in our dataset array to a different element,
+            // we use datum(), the method for binding a single data value to a single element.
+            .datum(data)
+            .attr("d", line);
+
+        const pathLength = path.node().getTotalLength();
+        // D3 provides lots of transition options, have a play around here:
+        // https://github.com/d3/d3-transition
+        const transitionPath = d3
+            .transition()
+            .ease(d3.easeSin)
+            .duration(8000);
+
+        path
+            .attr("stroke-dashoffset", pathLength)
+            .attr("stroke-dasharray", pathLength)
+            .transition(transitionPath)
+            .attr("stroke-dashoffset", 0);
+    }
+
+    let line = lineWrapper();
+    pathWrapper(data, line);
 
     // Add X axis title
     let xTitle = svg.append("text")
@@ -110,20 +137,12 @@ function lineChart(data) {
         .attr("font-size", fontSize - 12);
     }
 
-    const pathLength = path.node().getTotalLength();
-    // D3 provides lots of transition options, have a play around here:
-    // https://github.com/d3/d3-transition
-    const transitionPath = d3
-        .transition()
-        .ease(d3.easeSin)
-        .duration(8000);
-
-    path
-        .attr("stroke-dashoffset", pathLength)
-        .attr("stroke-dasharray", pathLength)
-        .transition(transitionPath)
-        .attr("stroke-dashoffset", 0);
-
+    // Update chart when button is clicked
+    d3.select("#button1").on("click", () => {
+        // Create new fake data
+        let line = lineWrapper();
+        pathWrapper(data, line);
+    });
 }
 
 main();
