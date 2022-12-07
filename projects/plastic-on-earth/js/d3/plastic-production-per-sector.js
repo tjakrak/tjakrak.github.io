@@ -89,7 +89,7 @@ function barChart(data) {
             .duration(200)
             .style("opacity", .9);
 
-        div.html(`<p>${d.Amount}</p>`) // set the inner HTML on all the selected elements.
+        div.html(`<p>Amount: ${d3.format("~s")(d.Amount)} million tonnes</p>`) // set the inner HTML on all the selected elements.
             .style("left", event.clientX + "px")
             .style("top", event.clientY + "px");
     };

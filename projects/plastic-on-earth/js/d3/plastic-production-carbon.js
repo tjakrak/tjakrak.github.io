@@ -55,7 +55,7 @@ function treeMap(data) {
             .duration(200)
             .style("opacity", .9);
 
-        div.html(`<b><p>Amount: ${ d.data.Production }</p></b>`) // set the inner HTML on all the selected elements.
+        div.html(`<b><p>Amount: ${ d.data.Production } kg CO2e/ton polymer</p></b>`) // set the inner HTML on all the selected elements.
             .style("left", d3.pointer(event)[0] + "px")
             .style("top", d3.pointer(event)[1] + "px");
     };
