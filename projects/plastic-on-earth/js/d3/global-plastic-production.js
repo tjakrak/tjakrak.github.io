@@ -37,14 +37,17 @@ function lineChart(data) {
     const marginTop = height * 0.15;
     const marginBot = height * 0.2;
 
+    // Get the default fontsize of the h3 from index.html page
     let element = document.getElementsByTagName("h3");
     let style = window.getComputedStyle(element[0], null).getPropertyValue('font-size');
     let fontSize = parseFloat(style);
 
+    // Select svg id from the index.html and setup svg width and height
     let svg = d3.select("#svg1")
     svg.attr("width", width)
         .attr("height", height)
 
+    // Min and Maximum year
     let minMaxYear = d3.extent(data, function(d) { return d.Year; })
     // Scale and add X axis
     let xScale = d3.scaleTime()
@@ -52,8 +55,13 @@ function lineChart(data) {
         .range([ 0, width - marginLeft - marginRight ]);
     let xAxis = svg.append("g")
         .attr("transform", `translate(${marginLeft}, ${height - marginBot})`)
-        .call(d3.axisBottom(xScale)) // syntax: d3.axisLeft(scale) - construct an y-axis for the given scale
-    
+        .call(d3.axisBottom(xScale)); // syntax: d3.axisLeft(scale) - construct an y-axis for the given scale
+
+    xAxis.selectAll("text")
+        .style("fill", "white")
+    xAxis.selectAll("line")
+        .style("stroke", "white")
+
     // Scale and add Y axis
     let yScale = d3.scaleLinear()
         .domain([0, d3.max(data, function(d) { return d.Amount; })]) // actual number on data
@@ -61,6 +69,11 @@ function lineChart(data) {
     let yAxis = svg.append("g")
         .attr("transform", `translate(${marginLeft}, ${marginTop})`)
         .call(d3.axisLeft(yScale)) // syntax: d3.axisLeft(scale) - construct an y-axis for the given scale
+
+    yAxis.selectAll("text")
+        .style("fill", "white")
+    yAxis.selectAll("line")
+        .style("stroke", "white")
 
     function lineWrapper() {
         // Define line generator
@@ -72,6 +85,7 @@ function lineChart(data) {
         return line;
     }
 
+    // Append the path which generate the line in the line chart
     svg.append("path")
         .attr("class", "line")
         .attr('fill', 'none')
@@ -95,6 +109,7 @@ function lineChart(data) {
             .ease(d3.easeSin)
             .duration(8000);
 
+        // Set up path attributes
         path
             .attr("stroke-dashoffset", pathLength)
             .attr("stroke-dasharray", pathLength)
@@ -102,6 +117,7 @@ function lineChart(data) {
             .attr("stroke-dashoffset", 0);
     }
 
+    // Calling the functions to draw the chart
     let line = lineWrapper();
     pathWrapper(data, line);
 
@@ -122,6 +138,7 @@ function lineChart(data) {
         .attr("fill", "white")
         .style("text-anchor", "middle")
 
+    // Check if the reader using mobile or ipad
     if (isMobile) {
         xAxis.selectAll("text") // select all the text element
         .attr("transform", "translate(-10,10)rotate(-45)") // rotate the text

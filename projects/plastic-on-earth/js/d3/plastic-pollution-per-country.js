@@ -8,8 +8,8 @@ function main() {
         d3.csv("data/plastic_pollution_by_country.csv"),
     ]).then(function(files) {
         let data = new Map();
-        // files[0] will contain file1.csv
-        // files[1] will contain file2.csv
+
+        // Create a map that link country to mismanaged plastic waste amount
         files[1].forEach(function(d) {
             data.set(d.country, +d.mpw_oceans_2021)
         })
@@ -22,17 +22,19 @@ function main() {
 
 function geoMap(topology, data) {
 
-    // Setting up canvas width and height
+    // Setting up canvas width, height, and margins
     const width = 700;
     const height = 600;
     const marginTop = 110;
     const marginBot = 100;
     const marginRight = 100;
 
+    // Selecting the svg id from the html page
     let svg = d3.select("#svg3")
     let div = d3.select("#tooltip3")
         .style("opacity", 0);
 
+    // Setup svg width and height
     svg.attr("width", width)
         .attr("height", height);
 
@@ -46,6 +48,7 @@ function geoMap(topology, data) {
     let dataArr = Array.from( data.values() );
     let minData = d3.min(dataArr);
     let maxData = d3.max(dataArr);
+
     // Log Scale
     const logScale = d3.scaleLog()
         .domain([1, maxData])
@@ -100,11 +103,12 @@ function geoMap(topology, data) {
         .on("mouseleave", hideToolTip)
 
     // Add legend
+    const colorScaleLegend = d3.scaleLinear([d3.rgb(153,216,201), d3.rgb(44,162,95)]).domain([1, 10])
     svg.append("g")
-    .attr("class", "legendQuant")
-    .attr("transform", `translate(100, ${height-marginBot})`)
-    .attr("fill", "white")
-    .attr("stroke", "white");
+        .attr("class", "legendQuant")
+        .attr("transform", `translate(100, ${height-marginBot})`)
+        .attr("fill", "white")
+        .attr("stroke", "white");
 
     let legend = d3.legendColor()
         .cells(10)
@@ -112,10 +116,10 @@ function geoMap(topology, data) {
         .titleWidth(100)
         .orient("horizontal")
         .shapeWidth(50)
-        .scale(colorScale);
+        .scale(colorScaleLegend);
 
     svg.select(".legendQuant")
-        .call(legend);
+        .call(legend)
 
 }
 

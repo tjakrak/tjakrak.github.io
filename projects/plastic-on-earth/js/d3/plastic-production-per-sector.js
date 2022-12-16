@@ -28,6 +28,7 @@ function barChart(data) {
         isMobile = true;
     }
 
+    // Mapping data
     let dataX = data.map(d => d.Amount);
     let dataY = data.map(d => d.Entity);
 
@@ -36,9 +37,11 @@ function barChart(data) {
     let div = d3.select("#tooltip2")
         .style("opacity", 0);
 
+    // Set canvas width and height
     let canvasWidth = 700;
     let canvasHeight = 600;
 
+    // Set svg width and height
     svg.attr("width", canvasWidth)
         .attr("height", canvasHeight);
 
